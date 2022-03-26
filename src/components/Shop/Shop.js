@@ -15,7 +15,11 @@ const Shop = () => {
     const handleAddToCart = (product) =>{
         console.log(product)
         const newCart = [...cart, product];
-        setCart(newCart);
+        setCart(newCart); 
+        
+    }
+    const remove  =() =>{
+        
     }
     return (
         <div className='shop-container'>
@@ -32,10 +36,11 @@ const Shop = () => {
             <h1>Selected Books</h1>
             {
                 cart.map(product => <h1>{product.name}</h1>)
+              
             }
-            <button>CHOOSE 1 FOR ME</button>
+            <button className='btn-1'>CHOOSE 1 FOR ME</button>
             <br />
-            <button>CHOOSE AGAIN</button>
+            <button onClick={remove} className='btn-2'>CHOOSE AGAIN</button>
 
            </div>
         </div>
